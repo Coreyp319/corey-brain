@@ -4,6 +4,11 @@ title: Portfolio
 description: "Experience, products, patents, and published work by Corey Preston."
 ---
 
+{% set ciscoRole = experience[0] %}
+{% set fishmanRole = experience[1] %}
+{% set consultingRole = experience[2] %}
+{% set adtechRole = experience[3] %}
+
 {# ---- Page Header ---- #}
 <section class="section">
   <div class="container">
@@ -21,204 +26,507 @@ description: "Experience, products, patents, and published work by Corey Preston
   </div>
 </section>
 
-{# ===========================================================================
-   EXPERIENCE
-   Role-based sections driven by experience.json
-   =========================================================================== #}
-<section class="section">
-  <div class="container">
+<div class="portfolio-gate" data-portfolio-gate>
+            <input class="portfolio-view-input" type="radio" name="portfolio-view" id="portfolio-view-resume" checked>
+            <input class="portfolio-view-input" type="radio" name="portfolio-view" id="portfolio-view-explore">
 
-    <h2>Experience</h2>
+            <section class="section section--compact portfolio-view-switch">
+              <div class="container container--narrow">
+                <div class="portfolio-view-switch__controls" aria-label="Portfolio view selector">
+                  <label class="portfolio-view-switch__option" for="portfolio-view-resume">
+                    <span class="portfolio-view-switch__title">Resume View</span>
+                    <span class="portfolio-view-switch__copy">Structured for recruiters, collaborators, and quick scanning.</span>
+                  </label>
+                  <label class="portfolio-view-switch__option" for="portfolio-view-explore">
+                    <span class="portfolio-view-switch__title">Explore View</span>
+                    <span class="portfolio-view-switch__copy">A chronological timeline with context, side quests, and campaign history.</span>
+                  </label>
+                </div>
 
-    <div class="stagger">
-      {% for role in experience %}
-      <section id="{{ role.id }}" class="experience-role">
+                <p class="portfolio-view-switch__note">
+                  Choose the version that matches how you want to browse: concise and role-based, or story-first and chronological.
+                </p>
+              </div>
+            </section>
 
-        <header class="experience-role__header">
-          <h2 class="experience-role__company">{{ role.company }}</h2>
-          <p class="experience-role__title">{{ role.title }}</p>
-          <p class="experience-role__period">
-            {{ role.period }}
-            {% if role.current %}
-            <span class="experience-role__badge">Current</span>
-            {% endif %}
-          </p>
-        </header>
+            <div class="portfolio-panels">
+              <div class="portfolio-panel portfolio-panel--resume">
+                {# ===========================================================================
+                   EXPERIENCE
+                   Role-based sections driven by experience.json
+                   =========================================================================== #}
+                <section class="section">
+                  <div class="container">
 
-        <p class="experience-role__summary">{{ role.summary | safe }}</p>
+                    <h2>Experience</h2>
 
-        {% for section in role.sections %}
-        <div class="experience-role__section">
-          <h3>{{ section.heading }}</h3>
-          <ul>
-            {% for item in section.items %}
-            <li>{{ item | safe }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endfor %}
+                    <div class="stagger">
+                      {% for role in experience %}
+                      <section id="{{ role.id }}" class="experience-role">
 
-        <div class="tech-tags">
-          {% for tag in role.tags %}
-          <span class="tech-tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
+                        <header class="experience-role__header">
+                          <h2 class="experience-role__company">{{ role.company }}</h2>
+                          <p class="experience-role__title">{{ role.title }}</p>
+                          <p class="experience-role__period">
+                            {{ role.period }}
+                            {% if role.current %}
+                            <span class="experience-role__badge">Current</span>
+                            {% endif %}
+                          </p>
+                        </header>
 
-      </section>
-      {% endfor %}
-    </div>
+                        <p class="experience-role__summary">{{ role.summary | safe }}</p>
 
-  </div>
-</section>
+                        {% for section in role.sections %}
+                        <div class="experience-role__section">
+                          <h3>{{ section.heading }}</h3>
+                          <ul>
+                            {% for item in section.items %}
+                            <li>{{ item | safe }}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        {% endfor %}
 
-{# ===========================================================================
-   NOTABLE PROJECTS
-   =========================================================================== #}
-<section class="section">
-  <div class="container">
+                        <div class="tech-tags">
+                          {% for tag in role.tags %}
+                          <span class="tech-tag">{{ tag }}</span>
+                          {% endfor %}
+                        </div>
 
-    <h2>Notable Projects</h2>
+                      </section>
+                      {% endfor %}
+                    </div>
 
-    <div class="grid grid--3">
+                  </div>
+                </section>
 
-      {# ---- Cocovox ---- #}
-      <div class="card" id="cocovox-project">
-        <span class="card__eyebrow">AI Platform &middot; Side Project</span>
-        <h3 class="card__title">Cocovox</h3>
-        <p class="card__description">
-          AI-Powered Tutor with accessibility-focused design. Adaptive tutoring,
-          7 literacy lesson types, AAC communication tools.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">Speech Recognition</span>
-          <span class="tech-tag">Spaced Repetition</span>
-          <span class="tech-tag">Accessibility</span>
-        </div>
-        <a href="/cocovox/" class="btn btn--primary" style="margin-block-start: var(--space-4);">View Project</a>
-      </div>
+                {# ===========================================================================
+                   NOTABLE PROJECTS
+                   =========================================================================== #}
+                <section class="section">
+                  <div class="container">
 
-      {# ---- Patent ---- #}
-      <div class="card" id="patent">
-        <span class="card__eyebrow">Patent Pending</span>
-        <h3 class="card__title">AI Content Automation System</h3>
-        <p class="card__description">
-          End-to-end ML pipeline for content transformation and generation.
-          Reduced content production time by over 70%.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">Generative AI</span>
-          <span class="tech-tag">LangChain</span>
-          <span class="tech-tag">Content Trees</span>
-          <span class="tech-tag">NLP</span>
-        </div>
-        <a href="https://patents.google.com/patent/US20250233802A1" target="_blank" rel="noopener" class="btn btn--primary" style="margin-block-start: var(--space-4);">View on Google Patents</a>
-      </div>
+                    <h2>Notable Projects</h2>
 
-      {# ---- Hardware Installation Guide ---- #}
-      <div class="card" id="hw-guide">
-        <span class="card__eyebrow">Digital Transformation</span>
-        <h3 class="card__title">Hardware Installation Guide</h3>
-        <p class="card__description">
-          Led CSDL project converting traditional documentation to interactive
-          digital format with AI-assisted features.
-        </p>
-        <div class="tech-tags">
-          <span class="tech-tag">SvelteKit</span>
-          <span class="tech-tag">NodeJS</span>
-          <span class="tech-tag">Postgres</span>
-          <span class="tech-tag">AI</span>
-        </div>
-      </div>
+                    <div class="grid grid--3">
 
-    </div>
+                      {# ---- Cocovox ---- #}
+                      <div class="card" id="cocovox-project">
+                        <span class="card__eyebrow">AI Platform &middot; Side Project</span>
+                        <h3 class="card__title">Cocovox</h3>
+                        <p class="card__description">
+                          AI-Powered Tutor with accessibility-focused design. Adaptive tutoring,
+                          7 literacy lesson types, AAC communication tools.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">Python</span>
+                          <span class="tech-tag">FastAPI</span>
+                          <span class="tech-tag">Speech Recognition</span>
+                          <span class="tech-tag">Spaced Repetition</span>
+                          <span class="tech-tag">Accessibility</span>
+                        </div>
+                        <a href="/cocovox/" class="btn btn--primary" style="margin-block-start: var(--space-4);">View Project</a>
+                      </div>
 
-  </div>
-</section>
+                      {# ---- Patent ---- #}
+                      <div class="card" id="patent">
+                        <span class="card__eyebrow">Patent Pending</span>
+                        <h3 class="card__title">AI Content Automation System</h3>
+                        <p class="card__description">
+                          End-to-end ML pipeline for content transformation and generation.
+                          Reduced content production time by over 70%.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">Generative AI</span>
+                          <span class="tech-tag">LangChain</span>
+                          <span class="tech-tag">Content Trees</span>
+                          <span class="tech-tag">NLP</span>
+                        </div>
+                        <a href="https://patents.google.com/patent/US20250233802A1" target="_blank" rel="noopener" class="btn btn--primary" style="margin-block-start: var(--space-4);">View on Google Patents</a>
+                      </div>
 
-{# ===========================================================================
-   PUBLICATIONS & SPEAKING
-   =========================================================================== #}
-<section class="section">
-  <div class="container">
+                      {# ---- Hardware Installation Guide ---- #}
+                      <div class="card" id="hw-guide">
+                        <span class="card__eyebrow">Digital Transformation</span>
+                        <h3 class="card__title">Hardware Installation Guide</h3>
+                        <p class="card__description">
+                          Led CSDL project converting traditional documentation to interactive
+                          digital format with AI-assisted features.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">SvelteKit</span>
+                          <span class="tech-tag">NodeJS</span>
+                          <span class="tech-tag">Postgres</span>
+                          <span class="tech-tag">AI</span>
+                        </div>
+                      </div>
 
-    <h2>Publications &amp; Speaking</h2>
+                      {# ---- Dione est. 1965. ---- #}
+                      <div class="card" id="dione">
+                        <span class="card__eyebrow">Ecommerce &middot; AI Research</span>
+                        <h3 class="card__title">dione est. 1965.</h3>
+                        <p class="card__description">
+                          Point-and-click product pipeline for consignment sellers, augmented
+                          with AI research on current market rates to price products faster and
+                          list inventory with more confidence.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">AI Research</span>
+                          <span class="tech-tag">Consignment</span>
+                          <span class="tech-tag">Pricing Intelligence</span>
+                          <span class="tech-tag">Workflow UX</span>
+                        </div>
+                      </div>
 
-    <div class="grid grid--2">
+                    </div>
 
-      {# ---- AdExchanger Article ---- #}
-      <div class="card">
-        <span class="card__eyebrow">Publication &middot; AdExchanger, 2015</span>
-        <h3 class="card__title">A Net Neutrality Boon For Marketers</h3>
-        <p class="card__description">
-          Published in AdExchanger. Net neutrality rules will create new opportunities
-          for marketers to enrich the way they engage consumers through faster data speeds
-          and richer digital experiences.
-        </p>
+                  </div>
+                </section>
 
-        <button
-          class="article-screenshot"
-          commandfor="lightbox-net-neutrality"
-          command="show-modal"
-          aria-label="View full AdExchanger article screenshot in lightbox"
-        >
-          <img
-            src="/assets/images/portfolio/misc/net-neutrality.png"
-            alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
-            loading="lazy"
-          />
-        </button>
+                {# ===========================================================================
+                   PUBLICATIONS & SPEAKING
+                   =========================================================================== #}
+                <section class="section">
+                  <div class="container">
 
-        <dialog id="lightbox-net-neutrality" class="lightbox" closedby="any">
-          <div class="lightbox__carousel" data-gallery="net-neutrality">
-            <figure data-index="0">
-              <img
-                src="/assets/images/portfolio/misc/net-neutrality.png"
-                alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
-                loading="lazy"
-              />
-              <figcaption>A Net Neutrality Boon For Marketers — AdExchanger, 2015</figcaption>
-            </figure>
-          </div>
-          <button commandfor="lightbox-net-neutrality" command="close" class="lightbox__close" aria-label="Close lightbox">✕</button>
-        </dialog>
-      </div>
+                    <h2>Publications &amp; Speaking</h2>
 
-      {# ---- Welcome to Tomorrow ---- #}
-      <div class="card">
-        <span class="card__eyebrow">Book &middot; Technology Education, 2017</span>
-        <div class="book-cover-wrap">
-          <img
-            src="/assets/images/WTT%20Cover.jpg"
-            alt="Welcome to Tomorrow book cover"
-            class="book-cover"
-            width="280"
-            height="420"
-            loading="lazy"
-          />
-        </div>
-        <h3 class="card__title">Welcome to Tomorrow</h3>
-        <p class="card__description">
-          A beginner's guide to technology for people who feel left behind by it.
-          Written in plain language with humor and pop culture references — covering
-          everything from IT basics to AI, Big Data, APIs, and SDKs.
-        </p>
-        <div style="margin-block-start: var(--space-4); display: flex; gap: var(--space-4); flex-wrap: wrap;">
-          <a href="https://welcometotomorrow.today" target="_blank" rel="noopener" class="btn btn--primary">Visit WelcomeToTomorrow.today</a>
-          <a href="/contact/" class="btn btn--secondary">Request a Copy</a>
-        </div>
-      </div>
+                    <div class="grid grid--2">
 
-    </div>
+                      {# ---- AdExchanger Article ---- #}
+                      <div class="card" id="net-neutrality-publication">
+                        <span class="card__eyebrow">Publication &middot; AdExchanger, 2015</span>
+                        <h3 class="card__title">A Net Neutrality Boon For Marketers</h3>
+                        <p class="card__description">
+                          Published in AdExchanger. Net neutrality rules will create new opportunities
+                          for marketers to enrich the way they engage consumers through faster data speeds
+                          and richer digital experiences.
+                        </p>
 
-    <p style="margin-block-start: var(--space-6); color: var(--color-ink-muted);">
-      Featured speaker at Cisco UI/UX Conference (dzone) on AI integration in user interfaces.
-    </p>
+                        <button
+                          class="article-screenshot"
+                          commandfor="lightbox-net-neutrality"
+                          command="show-modal"
+                          aria-label="View full AdExchanger article screenshot in lightbox"
+                        >
+                          <img
+                            src="/assets/images/portfolio/misc/net-neutrality.png"
+                            alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
+                            loading="lazy"
+                          />
+                        </button>
 
-  </div>
-</section>
+                        <dialog id="lightbox-net-neutrality" class="lightbox" closedby="any">
+                          <div class="lightbox__carousel" data-gallery="net-neutrality">
+                            <figure data-index="0">
+                              <img
+                                src="/assets/images/portfolio/misc/net-neutrality.png"
+                                alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
+                                loading="lazy"
+                              />
+                              <figcaption>A Net Neutrality Boon For Marketers — AdExchanger, 2015</figcaption>
+                            </figure>
+                          </div>
+                          <button commandfor="lightbox-net-neutrality" command="close" class="lightbox__close" aria-label="Close lightbox">✕</button>
+                        </dialog>
+                      </div>
 
+                      {# ---- Welcome to Tomorrow ---- #}
+                      <div class="card">
+                        <span class="card__eyebrow">Book &middot; Technology Education, 2017</span>
+                        <div class="book-cover-wrap">
+                          <img
+                            src="/assets/images/WTT%20Cover.jpg"
+                            alt="Welcome to Tomorrow book cover"
+                            class="book-cover"
+                            width="280"
+                            height="420"
+                            loading="lazy"
+                          />
+                        </div>
+                        <h3 class="card__title">Welcome to Tomorrow</h3>
+                        <p class="card__description">
+                          A beginner's guide to technology for people who feel left behind by it.
+                          Written in plain language with humor and pop culture references — covering
+                          everything from IT basics to AI, Big Data, APIs, and SDKs.
+                        </p>
+                        <div style="margin-block-start: var(--space-4); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                          <a href="https://welcometotomorrow.today" target="_blank" rel="noopener" class="btn btn--primary">Visit WelcomeToTomorrow.today</a>
+                          <a href="/contact/" class="btn btn--secondary">Request a Copy</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <p style="margin-block-start: var(--space-6); color: var(--color-ink-muted);">
+                      Featured speaker at Cisco UI/UX Conference (dzone) on AI integration in user interfaces.
+                    </p>
+
+                  </div>
+                </section>
+              </div>
+
+              <div class="portfolio-panel portfolio-panel--explore">
+                <section class="section">
+                  <div class="container">
+                    <header class="portfolio-explore-intro">
+                      <h2>Career Timeline</h2>
+                      <p>
+                        The resume view is optimized for skimming. This version is for wandering through the work in order: big bets,
+                        turning points, published work, and the years in ad tech that still power the campaign archive below.
+                      </p>
+                    </header>
+
+                    <div class="timeline-layout">
+                      <nav class="timeline-nav" aria-label="Portfolio timeline navigation">
+                        <a href="#now">Now</a>
+                        <a href="#patent-journey">2025</a>
+                        <a href="#cisco-journey">2021</a>
+                        <a href="#fishman-journey">2018</a>
+                        <a href="#book-journey">2017</a>
+                        <a href="#consulting-journey">2016</a>
+                        <a href="#adtech">2008</a>
+                      </nav>
+
+                      <div class="timeline stagger" style="view-transition-name: portfolio-timeline;">
+                        <article class="timeline-entry" id="now">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2026</p>
+                          <div class="timeline-card timeline-card--featured">
+                            <p class="timeline-card__eyebrow">Now Building</p>
+                            <h3 class="timeline-card__title">Cocovox</h3>
+                            <p class="timeline-card__summary">
+                              An AI literacy and communication platform built around accessibility, speech feedback, and the reality that
+                              too many students are being asked to learn with tools that were never designed for them.
+                            </p>
+                            <div class="timeline-stats">
+                              <div class="timeline-stat">
+                                <span class="timeline-stat__number">2 in 3</span>
+                                <span class="timeline-stat__label">US students below grade level in reading</span>
+                              </div>
+                              <div class="timeline-stat">
+                                <span class="timeline-stat__number">54M</span>
+                                <span class="timeline-stat__label">US adults read below 6th grade level</span>
+                              </div>
+                              <div class="timeline-stat">
+                                <span class="timeline-stat__number">130M</span>
+                                <span class="timeline-stat__label">US adults with limited literacy</span>
+                              </div>
+                            </div>
+                            <details>
+                              <summary>What is in the platform</summary>
+                              <div class="timeline-detail">
+                                <div class="prose">
+                                  <ul>
+                                    <li>Adaptive tutoring with seven literacy lesson types and real-time feedback.</li>
+                                    <li>A modern AAC layer organized around essential words, personal vocabulary, and AI predictions.</li>
+                                    <li>Accessibility-first product design with speech recognition, spaced repetition, and multimodal learning support.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </details>
+                            <div class="tech-tags">
+                              <span class="tech-tag">Python</span>
+                              <span class="tech-tag">FastAPI</span>
+                              <span class="tech-tag">Speech Recognition</span>
+                              <span class="tech-tag">Accessibility</span>
+                              <span class="tech-tag">AI Product Design</span>
+                            </div>
+                            <a href="/cocovox/" class="btn btn--primary" style="margin-block-start: var(--space-4);">Explore Cocovox</a>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="patent-journey">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2025</p>
+                          <div class="timeline-card">
+                            <p class="timeline-card__eyebrow">Patent Published</p>
+                            <h3 class="timeline-card__title">AI Content Automation System</h3>
+                            <p class="timeline-card__summary">
+                              A generative AI content tree system for transforming structured source material into reusable, multi-format outputs.
+                              The work came out of practical publishing pain: too much manual lift, too many formats, not enough leverage.
+                            </p>
+                            <div class="tech-tags">
+                              <span class="tech-tag">Generative AI</span>
+                              <span class="tech-tag">Content Trees</span>
+                              <span class="tech-tag">Automation</span>
+                              <span class="tech-tag">LangChain</span>
+                            </div>
+                            <a href="https://patents.google.com/patent/US20250233802A1" target="_blank" rel="noopener" class="btn btn--primary" style="margin-block-start: var(--space-4);">Read the Patent</a>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="cisco-journey">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2021-Present</p>
+                          <div class="timeline-card">
+                            <p class="timeline-card__eyebrow">Cisco Systems</p>
+                            <h3 class="timeline-card__title">{{ ciscoRole.title }}</h3>
+                            <p class="timeline-card__summary">{{ ciscoRole.summary }}</p>
+                            <details>
+                              <summary>See the work across leadership, AI, and delivery</summary>
+                              <div class="timeline-detail">
+                                {% for section in ciscoRole.sections %}
+                                <div class="prose">
+                                  <p><strong>{{ section.heading }}</strong></p>
+                                  <ul>
+                                    {% for item in section.items %}
+                                    <li>{{ item | safe }}</li>
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+                                {% endfor %}
+                              </div>
+                            </details>
+                            <div class="tech-tags">
+                              {% for tag in ciscoRole.tags %}
+                              <span class="tech-tag">{{ tag }}</span>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="fishman-journey">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2018-2021</p>
+                          <div class="timeline-card">
+                            <p class="timeline-card__eyebrow">Fishman Consulting at Cisco</p>
+                            <h3 class="timeline-card__title">{{ fishmanRole.title }}</h3>
+                            <p class="timeline-card__summary">{{ fishmanRole.summary }}</p>
+                            <details>
+                              <summary>How the content operation changed</summary>
+                              <div class="timeline-detail">
+                                {% for section in fishmanRole.sections %}
+                                <div class="prose">
+                                  <p><strong>{{ section.heading }}</strong></p>
+                                  <ul>
+                                    {% for item in section.items %}
+                                    <li>{{ item | safe }}</li>
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+                                {% endfor %}
+                              </div>
+                            </details>
+                            <div class="tech-tags">
+                              {% for tag in fishmanRole.tags %}
+                              <span class="tech-tag">{{ tag }}</span>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="book-journey">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2017</p>
+                          <div class="timeline-card timeline-card--book">
+                            <div class="book-cover-wrap">
+                              <img
+                                src="/assets/images/WTT%20Cover.jpg"
+                                alt="Welcome to Tomorrow book cover"
+                                class="book-cover"
+                                width="280"
+                                height="420"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div>
+                              <p class="timeline-card__eyebrow">Published Work</p>
+                              <h3 class="timeline-card__title">Welcome to Tomorrow</h3>
+                              <p class="timeline-card__summary">
+                                A plain-language introduction to modern technology for people who feel like the industry left them behind.
+                                It turned dense technical concepts into something useful, readable, and human.
+                              </p>
+                              <div style="margin-block-start: var(--space-4); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+                                <a href="https://welcometotomorrow.today" target="_blank" rel="noopener" class="btn btn--primary">Visit the Book Site</a>
+                                <a href="/contact/" class="btn btn--secondary">Request a Copy</a>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="consulting-journey">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2016-2018</p>
+                          <div class="timeline-card">
+                            <p class="timeline-card__eyebrow">Independent Consulting</p>
+                            <h3 class="timeline-card__title">{{ consultingRole.title }}</h3>
+                            <p class="timeline-card__summary">{{ consultingRole.summary }}</p>
+                            <details>
+                              <summary>Research and writing focus</summary>
+                              <div class="timeline-detail">
+                                {% for section in consultingRole.sections %}
+                                <div class="prose">
+                                  <p><strong>{{ section.heading }}</strong></p>
+                                  <ul>
+                                    {% for item in section.items %}
+                                    <li>{{ item | safe }}</li>
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+                                {% endfor %}
+                              </div>
+                            </details>
+                            <div class="tech-tags">
+                              {% for tag in consultingRole.tags %}
+                              <span class="tech-tag">{{ tag }}</span>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </article>
+
+                        <article class="timeline-entry" id="adtech">
+                          <span class="timeline-node" aria-hidden="true"></span>
+                          <p class="timeline-year">2008-2016</p>
+                          <div class="timeline-card">
+                            <p class="timeline-card__eyebrow">NYC Ad Tech Years</p>
+                            <h3 class="timeline-card__title">{{ adtechRole.company }}</h3>
+                            <p class="timeline-card__summary">{{ adtechRole.summary }}</p>
+                            <details>
+                              <summary>Open the campaign archive</summary>
+                              <div class="timeline-detail">
+                                <div class="prose">
+                                  <p><strong>{{ adtechRole.sections[0].heading }}</strong></p>
+                                  <ul>
+                                    {% for item in adtechRole.sections[0].items %}
+                                    <li>{{ item | safe }}</li>
+                                    {% endfor %}
+                                  </ul>
+                                </div>
+
+                                <p class="gallery-company-label">Adcade</p>
+                                <div class="timeline-gallery-links">
+                                  {% for gallery in galleries %}
+                                  {% if gallery.company == "Adcade" %}
+                                  <a href="#gallery-{{ gallery.id }}" class="gallery-link">{{ gallery.title }}</a>
+                                  {% endif %}
+                                  {% endfor %}
+                                </div>
+
+                                <p class="gallery-company-label">Burst Media</p>
+                                <div class="timeline-gallery-links">
+                                  {% for gallery in galleries %}
+                                  {% if gallery.company == "Burst Media" %}
+                                  <a href="#gallery-{{ gallery.id }}" class="gallery-link">{{ gallery.title }}</a>
+                                  {% endif %}
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </details>
+                            <div class="tech-tags">
+                              {% for tag in adtechRole.tags %}
+                              <span class="tech-tag">{{ tag }}</span>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
 {# ===========================================================================
    PORTFOLIO GALLERIES
    Each gallery is a separate section with thumbnail grid, inline carousel,
@@ -241,7 +549,7 @@ description: "Experience, products, patents, and published work by Corey Preston
         <span class="gallery-header__eyebrow">{{ gallery.company }} &middot; {{ gallery.year }}</span>
         <h3 class="gallery-header__title">{{ gallery.title }}</h3>
         <p class="gallery-header__desc">{{ gallery.description }}</p>
-        <a href="{{ gallery.timelineRef }}" class="gallery-header__back">↑ Back to timeline</a>
+        <a href="{{ gallery.timelineRef }}" class="gallery-header__back" data-portfolio-view="explore">↑ Back to timeline</a>
       </header>
 
       {# ---- Thumbnail grid ---- #}
@@ -301,3 +609,58 @@ description: "Experience, products, patents, and published work by Corey Preston
     </div>
   </div>
 </section>
+</div>
+
+<script>
+  (() => {
+    const gate = document.querySelector('[data-portfolio-gate]');
+    if (!gate) return;
+
+    const resumeView = document.getElementById('portfolio-view-resume');
+    const exploreView = document.getElementById('portfolio-view-explore');
+    const timelineTargets = new Set([
+      'now',
+      'patent-journey',
+      'cisco-journey',
+      'fishman-journey',
+      'book-journey',
+      'consulting-journey',
+      'adtech'
+    ]);
+
+    const syncViewToHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (!hash) return;
+
+      if (timelineTargets.has(hash)) {
+        exploreView.checked = true;
+        const target = document.getElementById(hash);
+        if (target) {
+          requestAnimationFrame(() => {
+            target.scrollIntoView({ block: 'start' });
+          });
+        }
+        return;
+      }
+
+      if (hash === 'cisco' || hash === 'patent') {
+        resumeView.checked = true;
+      }
+    };
+
+    gate.querySelectorAll('[data-portfolio-view]').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (link.dataset.portfolioView === 'explore') {
+          exploreView.checked = true;
+        }
+
+        if (link.dataset.portfolioView === 'resume') {
+          resumeView.checked = true;
+        }
+      });
+    });
+
+    window.addEventListener('hashchange', syncViewToHash);
+    syncViewToHash();
+  })();
+</script>

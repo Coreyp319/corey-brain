@@ -879,6 +879,121 @@
 
 
 /* ==========================================================================
+   PORTFOLIO VIEW GATE
+   Resume view is the default. Explore view restores the timeline-based story.
+   ========================================================================== */
+
+.portfolio-gate {
+  position: relative;
+}
+
+.portfolio-view-input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.portfolio-view-switch {
+  padding-block-start: 0;
+}
+
+.portfolio-view-switch__controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: linear-gradient(135deg, var(--color-surface-alt) 0%, var(--color-surface) 100%);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+}
+
+@media (min-width: 768px) {
+  .portfolio-view-switch__controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.portfolio-view-switch__option {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.portfolio-view-switch__option:hover {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.portfolio-view-switch__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.portfolio-view-switch__copy {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.portfolio-view-switch__note {
+  margin-block-start: var(--space-4);
+  color: var(--color-ink-muted);
+}
+
+#portfolio-view-resume:checked ~ .portfolio-view-switch .portfolio-view-switch__option[for="portfolio-view-resume"],
+#portfolio-view-explore:checked ~ .portfolio-view-switch .portfolio-view-switch__option[for="portfolio-view-explore"] {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-accent-soft) 100%);
+}
+
+.portfolio-panel {
+  display: none;
+}
+
+#portfolio-view-resume:checked ~ .portfolio-panels .portfolio-panel--resume,
+#portfolio-view-explore:checked ~ .portfolio-panels .portfolio-panel--explore {
+  display: block;
+}
+
+.portfolio-explore-intro {
+  max-width: 46rem;
+  margin-block-end: var(--space-8);
+}
+
+.portfolio-explore-intro p {
+  color: var(--color-ink-muted);
+}
+
+.timeline-gallery-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.timeline-gallery-links .gallery-link {
+  margin-block-start: 0;
+}
+
+
+/* ==========================================================================
    INTERACTIVE TIMELINE (Portfolio page)
    Uses scroll-snap, scroll-state queries, scroll-target-group,
    popover=hint, details/summary. Nearly zero JS.
