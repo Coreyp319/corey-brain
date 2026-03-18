@@ -81,7 +81,8 @@ description: Get in touch — consulting, collaboration, or just to say hello.
     <div style="margin-block-start: var(--space-16);">
       <h2 style="font-family: var(--font-serif); font-size: var(--text-2xl); margin-block-end: var(--space-6);">Send a Message</h2>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: var(--space-6);">
+      {% if contactForm.formspreeFormId %}
+      <form action="https://formspree.io/f/{{ contactForm.formspreeFormId | escape }}" method="POST" style="display: flex; flex-direction: column; gap: var(--space-6);">
         <div class="grid grid--2">
           <div class="form-group">
             <label for="name">Name</label>
@@ -114,6 +115,17 @@ description: Get in touch — consulting, collaboration, or just to say hello.
           <button type="submit" class="btn btn--primary btn--large">Send Message</button>
         </div>
       </form>
+      {% else %}
+      <div class="card">
+        <p class="card__description" style="margin-block-end: var(--space-4);">
+          The contact form is temporarily offline while the Formspree form ID is being configured.
+        </p>
+        <p class="card__description">
+          Reach me directly at <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> or on
+          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>.
+        </p>
+      </div>
+      {% endif %}
     </div>
 
     <!-- Direct Links -->
