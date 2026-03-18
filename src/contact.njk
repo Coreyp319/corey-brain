@@ -1,0 +1,130 @@
+---
+layout: base.njk
+title: Contact
+description: Get in touch — consulting, collaboration, or just to say hello.
+---
+
+<section class="section" style="view-transition-name: page-content;">
+  <div class="container container--narrow">
+
+    <header class="page-header" style="text-align: center;">
+      <h1 class="page-title" style="view-transition-name: page-title;">Let's Talk</h1>
+      <p class="page-subtitle" style="margin-inline: auto;">
+        Whether it's AI strategy, a collaboration, or just a conversation about building things that matter — I'd love to hear from you.
+      </p>
+    </header>
+
+    <!-- Consulting Overview -->
+    <div style="margin-block-end: var(--space-12);">
+      <h2 style="font-family: var(--font-serif); font-size: var(--text-2xl); margin-block-end: var(--space-6);">Corey Preston Consulting</h2>
+      <p style="font-size: var(--text-lg); color: var(--color-ink-light); line-height: var(--leading-relaxed); margin-block-end: var(--space-4);">
+        10 years building AI products and content systems — from startups to Cisco's 400K+ SMB customers.
+      </p>
+      <p style="font-size: var(--text-sm); color: var(--color-ink-muted); margin-block-end: var(--space-8);">
+        I work with startups building AI products · enterprises adopting LLMs · education organizations modernizing content · founders and businesses who need custom apps built around how they actually work.
+      </p>
+
+      <div class="grid grid--2 stagger">
+        <div class="card">
+          <h3 class="card__title">AI Strategy</h3>
+          <p class="card__description">
+            From LLM integration to AI-powered workflows — I help teams figure out where AI actually adds value
+            and how to ship it responsibly. Currently leading this work across Cisco's SMB support organization.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Product Development</h3>
+          <p class="card__description">
+            End-to-end product thinking. Requirements through launch. I specialize in AI-powered products
+            with complex UX challenges — <a href="/portfolio/#cocovox">Cocovox</a> is the proof.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Content Systems</h3>
+          <p class="card__description">
+            Technical content strategy, documentation systems, and AI-generated content pipelines.
+            I hold a <a href="/portfolio/#patent">US Patent</a> on this exact architecture.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Accessibility & AI/UX</h3>
+          <p class="card__description">
+            Designing AI features that work for everyone. Accessibility-first architecture from day one —
+            not bolted on after launch. See how this works in practice with <a href="/portfolio/#cocovox">Cocovox's AAC tools</a>.
+          </p>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3 class="card__title">App Development</h3>
+          <p class="card__description">
+            Custom applications built collaboratively around your workflow, your audience, and your personality — not a template.
+            I work closely with each client to shape something that feels like theirs from day one.
+          </p>
+          <p class="card__description" style="margin-block-start: var(--space-3); font-size: var(--text-sm); color: var(--color-ink-muted);">
+            <strong>Coming soon:</strong> an AI-powered ecommerce platform that helps consignment sellers research item value and list inventory smarter.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cocovox Inquiry -->
+    <div id="cocovox-inquiry" class="investor-callout">
+      <h2 class="investor-callout__heading">Interested in Cocovox?</h2>
+      <p class="investor-callout__text">
+        If you're an investor, advisor, or potential partner interested in Cocovox — an AI learning platform tackling the literacy crisis — I'd love to connect.
+      </p>
+      <p class="investor-callout__looking-for">
+        Looking for: early-stage investors, education advisors, accessibility advocates, strategic partners
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div style="margin-block-start: var(--space-16);">
+      <h2 style="font-family: var(--font-serif); font-size: var(--text-2xl); margin-block-end: var(--space-6);">Send a Message</h2>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <div class="grid grid--2">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required placeholder="your@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="" disabled selected>What's this about?</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Consulting Engagement">Consulting Engagement</option>
+            <option value="Cocovox / Investment">Cocovox / Investment</option>
+            <option value="Speaking / Collaboration">Speaking / Collaboration</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell me what you're working on..."></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn--primary btn--large">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Direct Links -->
+    <div style="margin-block-start: var(--space-16); text-align: center; padding-block-start: var(--space-8); border-block-start: 1px solid var(--color-border);">
+      <p style="color: var(--color-ink-muted); margin-block-end: var(--space-4);">Or find me elsewhere</p>
+      <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap;">
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" class="btn btn--secondary">LinkedIn</a>
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener" class="btn btn--secondary">GitHub</a>
+        <a href="{{ site.social.cocovox }}" target="_blank" rel="noopener" class="btn btn--secondary">Cocovox</a>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or site.title }} — {{ site.tagline }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+
+  <!-- View Transitions API -->
+  <meta name="view-transition" content="same-origin">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title or site.title }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or site.title }}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "jobTitle": "AI Strategy and Experience Lead",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Cisco"
+    },
+    "sameAs": [
+      "{{ site.social.linkedin }}",
+      "{{ site.social.github }}"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" style="view-transition-name: nav;">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" class="site-logo">{{ site.author.name }}</a>
+
+      <!-- Mobile menu trigger — zero JS, uses invoker commands + dialog -->
+      <button class="nav-toggle" commandfor="mobile-nav" command="show-modal" aria-label="Open navigation menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links" role="list">
+        {%- for item in site.nav %}
+        <li><a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+
+      <!-- Mobile nav dialog — light dismiss via closedby="any" -->
+      <dialog id="mobile-nav" class="mobile-nav-dialog" closedby="any">
+        <button commandfor="mobile-nav" command="close" class="nav-close" aria-label="Close navigation menu">&times;</button>
+        <ul class="mobile-nav-links" role="list">
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </dialog>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="{{ site.social.cocovox }}" target="_blank" rel="noopener noreferrer">Cocovox</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 {{ site.author.name }}. Built by hand with 11ty, modern CSS, and a genuine dislike of unnecessary JavaScript.</p>
+    </div>
+  </footer>
+  <!-- Stagger animation trigger — the only JS on the site -->
+  <script>
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.stagger').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.stagger').forEach(el => el.classList.add('is-visible'));
+    }
+
+    /* Lightbox: scroll to the clicked thumbnail's corresponding image.
+       Uses scrollIntoView({ container: 'nearest' }) when supported (2025 feature). */
+    document.querySelectorAll('.gallery-thumb[data-slide]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dialogId = btn.getAttribute('commandfor');
+        const slideIndex = btn.getAttribute('data-slide');
+        const dialog = document.getElementById(dialogId);
+        if (!dialog) return;
+        requestAnimationFrame(() => {
+          const target = dialog.querySelector('[data-index="' + slideIndex + '"]');
+          if (target) {
+            try {
+              target.scrollIntoView({ behavior: 'instant', inline: 'center', container: 'nearest' });
+            } catch (e) {
+              target.scrollIntoView({ behavior: 'instant', inline: 'center' });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

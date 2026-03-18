@@ -1,0 +1,188 @@
+---
+layout: base.njk
+title: Cocovox
+description: An AI-powered learning platform with adaptive tutoring, literacy-first lessons, and AAC communication tools. Built for every learner.
+---
+
+<section class="hero">
+  <h1 class="hero__title" style="view-transition-name: page-title;">Cocovox</h1>
+  <p class="hero__tagline">AI tutoring that meets every learner where they are.</p>
+  <p class="hero__intro">
+    2 in 3 American students can't read at grade level. 54 million adults read below sixth grade.
+    Cocovox is an AI learning platform built from the ground up to change that — with literacy-first lessons,
+    adaptive tutoring, and accessibility as the default.
+  </p>
+  <div class="hero__actions">
+    <a href="https://cocovox.ai" target="_blank" rel="noopener" class="btn btn--primary btn--large">Visit Cocovox.ai</a>
+    <a href="https://youtube.com/watch?v=placeholder" target="_blank" rel="noopener" class="btn btn--secondary btn--large">Watch Preview</a>
+  </div>
+</section>
+
+<!-- Core Features -->
+<section class="section" aria-label="Features">
+  <div class="container">
+    <h2 class="section-heading">What Makes Cocovox Different</h2>
+
+    <div class="carousel" role="list">
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Adaptive</span>
+        <h3 class="card__title">AI That Learns You</h3>
+        <p class="card__description">
+          Just chat. Ask for a lesson, a quiz, flashcards, a deep dive — it generates them on the spot.
+          Everything adjusts to your level, from 3rd grade to grad school. Create a learning persona that
+          fits your style — tweak it, save it, reuse it.
+        </p>
+      </article>
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Literacy First</span>
+        <h3 class="card__title">7 Lesson Types, One Practice System</h3>
+        <p class="card__description">
+          Letter recognition, phoneme blending, sight words, sentence reading — every card has a practice bar.
+          Read aloud and get instant word-by-word feedback. Rate how it felt: "Too Easy!" or "Tricky?"
+          Spaced repetition schedules your next review automatically.
+        </p>
+      </article>
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Phonemic Awareness</span>
+        <h3 class="card__title">The #1 Predictor of Reading Success</h3>
+        <p class="card__description">
+          Blending ("/c/..../a/..../t/" → "cat"), segmenting, and rhyme matching built into the core —
+          not as premium add-ons. Because the science of reading shouldn't be locked behind a paywall.
+        </p>
+      </article>
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Dashboards</span>
+        <h3 class="card__title">Progress Parents Actually See</h3>
+        <p class="card__description">
+          Dashboards update after every session. Weekly emails showing what clicked and what didn't.
+          No more "how was tutoring?" followed by a shrug.
+        </p>
+      </article>
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Visual Learning</span>
+        <h3 class="card__title">Math & Science Animations</h3>
+        <p class="card__description">
+          Narrated animations that bring concepts to life. See the math, hear the explanation,
+          understand the why — not just the what.
+        </p>
+      </article>
+
+      <article class="card" role="listitem">
+        <span class="card__eyebrow">Accessible</span>
+        <h3 class="card__title">Accessibility Is the Default</h3>
+        <p class="card__description">
+          Every plan includes every feature. No pro tier for accessibility.
+          Built for every learner from day one — because it's not a feature, it's the architecture.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- AAC Spotlight -->
+<section class="section" aria-label="AAC Communication" style="background: var(--color-surface-warm);">
+  <div class="container">
+    <div class="callout callout--scoop" style="max-width: var(--max-width-wide); margin-inline: auto;">
+      <h2 class="section-heading">AAC: A Voice for Everyone</h2>
+      <p style="font-size: var(--text-lg); color: var(--color-ink-light); max-width: var(--max-width-prose); margin-block-end: var(--space-10); line-height: var(--leading-relaxed);">
+        Some kids and adults can't speak. If they're fortunate, they have an app that speaks for them.
+        Most of those apps show a giant grid of words. It's overwhelming. The voices are robotic.
+        The options aren't personalized. We're doing it differently.
+      </p>
+
+      <div class="grid grid--3 stagger">
+
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">🎯</span>
+          <h3 class="feature__title">Zone 1: Essential Words</h3>
+          <p class="feature__text">
+            Eight words that never move. Yes, no, help, more. Always in the same spot.
+            Muscle memory matters — if "help" is always in the same place, you can find it without looking.
+          </p>
+        </div>
+
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">⭐</span>
+          <h3 class="feature__title">Zone 2: Personal Vocabulary</h3>
+          <p class="feature__text">
+            Words you use a lot. Star your favorites and they rise to the top.
+            Your communication tool should know you.
+          </p>
+        </div>
+
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">🧠</span>
+          <h3 class="feature__title">Zone 3: AI Predictions</h3>
+          <p class="feature__text">
+            AI suggests what you might say next based on context. Connected to your calendar —
+            during math class it shows math words. After school: snack, tired, can we play outside.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="grid grid--2 stagger" style="margin-block-start: var(--space-10);">
+
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">🗣️</span>
+          <h3 class="feature__title">100+ AI Voices</h3>
+          <p class="feature__text">
+            No more robotic voice from 2005. Over 100 options that actually sound human.
+            Save presets — a classroom voice for presentations, a friends voice for lunch.
+          </p>
+        </div>
+
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true">💰</span>
+          <h3 class="feature__title">$19.99/month. No Upsells.</h3>
+          <p class="feature__text">
+            Most competitors charge $269 upfront with no trial. We offer a free trial,
+            then $19.99/month with every feature included. Accessibility is never an add-on.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section" aria-label="Impact numbers">
+  <div class="container">
+    <div class="grid grid--3 stagger">
+      <div class="stat">
+        <span class="stat__number">2 in 3</span>
+        <span class="stat__label">US students can't read at grade level (NAEP 2024)</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">54M</span>
+        <span class="stat__label">US adults read below sixth grade</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">$19.99</span>
+        <span class="stat__label">/month — vs $269 upfront from competitors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="text-align: center;">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Built for Every Learner</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-ink-light); margin-block-end: var(--space-8); line-height: var(--leading-relaxed);">
+      Cocovox is in active development. If you work in education, literacy, or accessibility —
+      or if you know someone who could use this — I'd love to hear from you.
+    </p>
+    <div class="hero__actions">
+      <a href="https://cocovox.ai" target="_blank" rel="noopener" class="btn btn--primary btn--large">Visit Cocovox.ai</a>
+      <a href="/contact/" class="btn btn--secondary btn--large">Get in Touch</a>
+    </div>
+  </div>
+</section>

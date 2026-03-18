@@ -1,0 +1,198 @@
+---
+layout: base.njk
+title: Corey Preston
+description: AI Technical Leader, patent holder, and product builder. I lead AI at Cisco, built Cocovox, and help companies ship AI products.
+---
+
+<section class="hero">
+  <img
+    src="/assets/images/headshot.jpg"
+    alt="Corey Preston"
+    class="hero__headshot"
+    width="128"
+    height="128"
+    style="view-transition-name: hero-image;"
+    onerror="this.style.display='none'"
+  >
+
+  <h1 class="hero__title" style="view-transition-name: page-title;">Corey Preston</h1>
+  <p class="hero__tagline">AI Technical Leader · Patent Holder · Product Builder · Author</p>
+  <p class="hero__intro">
+    I lead AI at Cisco, hold a US patent on generative AI content systems, and I'm building
+    <a href="/cocovox/">Cocovox</a> — an AI learning platform tackling the literacy crisis.
+  </p>
+
+  <div class="hero__actions">
+    <a href="/contact/" class="btn btn--primary btn--large">Let's Work Together</a>
+    <a href="/portfolio/" class="btn btn--secondary btn--large">View Portfolio</a>
+    <a href="{{ site.resume }}" class="btn btn--secondary btn--large" download>Download Resume</a>
+  </div>
+
+  <p class="hero__meta">
+    <small>San Anselmo, CA · <a href="{{ site.social.linkedin }}">LinkedIn</a></small>
+  </p>
+</section>
+
+<!-- Technical Skills -->
+<section class="section section--compact" aria-label="Technical Skills">
+  <div class="container">
+    <h2 class="section-heading section-heading--subtle">Technical Skills</h2>
+
+    <div class="tech-stack">
+      <div class="tech-stack__group">
+        <strong class="tech-stack__label">AI/ML</strong>
+        <span class="tech-tag">LangChain</span>
+        <span class="tech-tag">LangSmith</span>
+        <span class="tech-tag">Pydantic</span>
+        <span class="tech-tag">Transformer Models</span>
+        <span class="tech-tag">Prompt Engineering</span>
+      </div>
+
+      <div class="tech-stack__group">
+        <strong class="tech-stack__label">Programming</strong>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">NodeJS</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">SvelteKit</span>
+      </div>
+
+      <div class="tech-stack__group">
+        <strong class="tech-stack__label">Infrastructure</strong>
+        <span class="tech-tag">MLOps</span>
+        <span class="tech-tag">Hugging Face</span>
+        <span class="tech-tag">Ollama</span>
+        <span class="tech-tag">Open-WebUI</span>
+      </div>
+
+      <div class="tech-stack__group">
+        <strong class="tech-stack__label">Web</strong>
+        <span class="tech-tag">HTML/CSS</span>
+        <span class="tech-tag">Figma</span>
+        <span class="tech-tag">UI/UX Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Work -->
+<section class="section" aria-label="Featured Work">
+  <div class="container">
+    <h2 class="section-heading">What I've Built</h2>
+
+    <div class="grid grid--3 stagger">
+      <article class="card card--link">
+        <span class="card__eyebrow">Venture · AI Platform</span>
+        <h3 class="card__title"><a href="/cocovox/">Cocovox</a></h3>
+        <p class="card__description">
+          AI learning platform with adaptive tutoring, literacy-first lessons, and AAC communication tools — built from the ground up around accessibility and real-time speech feedback.
+        </p>
+        <p class="card__meta">Seeking early-stage partners</p>
+      </article>
+
+      <article class="card card--link">
+        <span class="card__eyebrow">Patent · Generative AI</span>
+        <h3 class="card__title"><a href="/portfolio/#patent">AI Content Pipeline</a></h3>
+        <p class="card__description">
+          US Patent for a spanning content tree system — a generative AI architecture for structured content creation and network automation. Published 2025.
+        </p>
+      </article>
+
+      <article class="card card--link">
+        <span class="card__eyebrow">Role · AI Strategy</span>
+        <h3 class="card__title"><a href="/portfolio/#cisco">Cisco AI Leadership</a></h3>
+        <p class="card__description">
+          Leading AI solutions for 400K+ SMB customers, mentoring cross-functional teams, and standing up Cisco's LLM Center of Excellence for support engineering.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section surface-alt" aria-label="Services">
+  <div class="container">
+    <h2 class="section-heading">How I Can Help</h2>
+    <p class="section-subtitle">
+      10+ years building AI products and content systems — from startups to Cisco's 400K+ SMB customers.
+    </p>
+
+    <div class="grid grid--2 stagger">
+      <article class="card">
+        <h3 class="card__title">AI Strategy</h3>
+        <p class="card__description">
+          Audit your AI readiness, define a pragmatic roadmap, and identify the highest-value use cases for LLMs, agents, and automation in your organization.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Product Development</h3>
+        <p class="card__description">
+          Go from concept to shipped product — architecture, prototyping, user testing, and iteration. Specializing in AI-powered tools and platforms.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Content Systems</h3>
+        <p class="card__description">
+          Design and build structured content pipelines powered by generative AI — the same approach behind my patented content tree system.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Technical Leadership</h3>
+        <p class="card__description">
+          Stand up AI centers of excellence, mentor engineering teams, and establish best practices for responsible, production-grade AI development.
+        </p>
+      </article>
+    </div>
+
+    <div class="section__cta">
+      <a href="/contact/" class="btn btn--primary">Let's Work Together</a>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Writing -->
+<section class="section" aria-label="Latest writing">
+  <div class="container container--narrow">
+    <h2 class="section-heading">Latest Writing</h2>
+
+    <div class="stagger">
+      {%- set posts = collections.posts | head(3) %}
+      {%- for post in posts %}
+      <article class="post-card">
+        <div class="post-card__meta">
+          <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+          <span>{{ post.content | readingTime }}</span>
+        </div>
+        <h3 class="post-card__title">
+          <a href="{{ post.url }}" style="view-transition-name: post-title-{{ post.fileSlug }};">{{ post.data.title }}</a>
+        </h3>
+        {% if post.data.excerpt %}
+        <p class="post-card__excerpt">{{ post.data.excerpt }}</p>
+        {% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+
+    {% if collections.posts | length > 3 %}
+    <div class="section__cta">
+      <a href="/blog/" class="btn btn--secondary">View All Posts</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- About CTA -->
+<section class="section" aria-label="About">
+  <div class="container container--narrow section__centered">
+    <h2 class="section-heading">A Little About Me</h2>
+    <p class="section-subtitle">
+      I spent a decade in NYC's ad tech scene building products at the intersection of technology and creative storytelling. Now I lead AI strategy at Cisco and I'm channeling everything I've learned into Cocovox — because 2 in 3 kids can't read at grade level and that's not okay.
+    </p>
+    <div class="section__cta">
+      <a href="/about/" class="btn btn--primary">Read My Full Story</a>
+    </div>
+  </div>
+</section>

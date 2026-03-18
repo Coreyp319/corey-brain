@@ -1,0 +1,26 @@
+{
+  "title": "Corey Preston",
+  "description": "AI Technical Leader, patent holder, and product builder. Designing AI solutions at Cisco, building Cocovox, and available for consulting.",
+  "url": "https://welcometotomorrow.today",
+  "author": {
+    "name": "Corey Preston",
+    "email": "CoreyPreston@gmail.com",
+    "location": "San Anselmo, California",
+    "phone": "978-201-0072"
+  },
+  "tagline": "AI Technical Leader · Patent Holder · Product Builder · Author",
+  "resume": "/assets/COREY-PRESTON-Resume.pdf",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/coreypreston",
+    "github": "https://github.com/coreypreston",
+    "cocovox": "https://cocovox.ai"
+  },
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Portfolio", "url": "/portfolio/" },
+    { "label": "Cocovox", "url": "/cocovox/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

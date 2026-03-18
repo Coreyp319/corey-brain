@@ -1,0 +1,303 @@
+---
+layout: base.njk
+title: Portfolio
+description: "Experience, products, patents, and published work by Corey Preston."
+---
+
+{# ---- Page Header ---- #}
+<section class="section">
+  <div class="container">
+
+    <header class="page-header" style="text-align: center;">
+      <h1 class="page-title" style="view-transition-name: page-title;">Portfolio</h1>
+      <p class="page-subtitle" style="margin-inline: auto;">
+        Experience, products, patents, and published work.
+      </p>
+      <div style="margin-block-start: var(--space-4);">
+        <a href="{{ site.resume }}" class="btn btn--secondary" download>Download Resume</a>
+      </div>
+    </header>
+
+  </div>
+</section>
+
+{# ===========================================================================
+   EXPERIENCE
+   Role-based sections driven by experience.json
+   =========================================================================== #}
+<section class="section">
+  <div class="container">
+
+    <h2>Experience</h2>
+
+    <div class="stagger">
+      {% for role in experience %}
+      <section id="{{ role.id }}" class="experience-role">
+
+        <header class="experience-role__header">
+          <h2 class="experience-role__company">{{ role.company }}</h2>
+          <p class="experience-role__title">{{ role.title }}</p>
+          <p class="experience-role__period">
+            {{ role.period }}
+            {% if role.current %}
+            <span class="experience-role__badge">Current</span>
+            {% endif %}
+          </p>
+        </header>
+
+        <p class="experience-role__summary">{{ role.summary | safe }}</p>
+
+        {% for section in role.sections %}
+        <div class="experience-role__section">
+          <h3>{{ section.heading }}</h3>
+          <ul>
+            {% for item in section.items %}
+            <li>{{ item | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+
+        <div class="tech-tags">
+          {% for tag in role.tags %}
+          <span class="tech-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+      </section>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{# ===========================================================================
+   NOTABLE PROJECTS
+   =========================================================================== #}
+<section class="section">
+  <div class="container">
+
+    <h2>Notable Projects</h2>
+
+    <div class="grid grid--3">
+
+      {# ---- Cocovox ---- #}
+      <div class="card" id="cocovox-project">
+        <span class="card__eyebrow">AI Platform &middot; Side Project</span>
+        <h3 class="card__title">Cocovox</h3>
+        <p class="card__description">
+          AI-Powered Tutor with accessibility-focused design. Adaptive tutoring,
+          7 literacy lesson types, AAC communication tools.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Spaced Repetition</span>
+          <span class="tech-tag">Accessibility</span>
+        </div>
+        <a href="/cocovox/" class="btn btn--primary" style="margin-block-start: var(--space-4);">View Project</a>
+      </div>
+
+      {# ---- Patent ---- #}
+      <div class="card" id="patent">
+        <span class="card__eyebrow">Patent Pending</span>
+        <h3 class="card__title">AI Content Automation System</h3>
+        <p class="card__description">
+          End-to-end ML pipeline for content transformation and generation.
+          Reduced content production time by over 70%.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Generative AI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">Content Trees</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <a href="https://patents.google.com/patent/US20250233802A1" target="_blank" rel="noopener" class="btn btn--primary" style="margin-block-start: var(--space-4);">View on Google Patents</a>
+      </div>
+
+      {# ---- Hardware Installation Guide ---- #}
+      <div class="card" id="hw-guide">
+        <span class="card__eyebrow">Digital Transformation</span>
+        <h3 class="card__title">Hardware Installation Guide</h3>
+        <p class="card__description">
+          Led CSDL project converting traditional documentation to interactive
+          digital format with AI-assisted features.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">SvelteKit</span>
+          <span class="tech-tag">NodeJS</span>
+          <span class="tech-tag">Postgres</span>
+          <span class="tech-tag">AI</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{# ===========================================================================
+   PUBLICATIONS & SPEAKING
+   =========================================================================== #}
+<section class="section">
+  <div class="container">
+
+    <h2>Publications &amp; Speaking</h2>
+
+    <div class="grid grid--2">
+
+      {# ---- AdExchanger Article ---- #}
+      <div class="card">
+        <span class="card__eyebrow">Publication &middot; AdExchanger, 2015</span>
+        <h3 class="card__title">A Net Neutrality Boon For Marketers</h3>
+        <p class="card__description">
+          Published in AdExchanger. Net neutrality rules will create new opportunities
+          for marketers to enrich the way they engage consumers through faster data speeds
+          and richer digital experiences.
+        </p>
+
+        <button
+          class="article-screenshot"
+          commandfor="lightbox-net-neutrality"
+          command="show-modal"
+          aria-label="View full AdExchanger article screenshot in lightbox"
+        >
+          <img
+            src="/assets/images/portfolio/misc/net-neutrality.png"
+            alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
+            loading="lazy"
+          />
+        </button>
+
+        <dialog id="lightbox-net-neutrality" class="lightbox" closedby="any">
+          <div class="lightbox__carousel" data-gallery="net-neutrality">
+            <figure data-index="0">
+              <img
+                src="/assets/images/portfolio/misc/net-neutrality.png"
+                alt="AdExchanger article screenshot — A Net Neutrality Boon For Marketers by Corey Preston"
+                loading="lazy"
+              />
+              <figcaption>A Net Neutrality Boon For Marketers — AdExchanger, 2015</figcaption>
+            </figure>
+          </div>
+          <button commandfor="lightbox-net-neutrality" command="close" class="lightbox__close" aria-label="Close lightbox">✕</button>
+        </dialog>
+      </div>
+
+      {# ---- Welcome to Tomorrow ---- #}
+      <div class="card">
+        <span class="card__eyebrow">Book &middot; Technology Education, 2017</span>
+        <div class="book-cover-wrap">
+          <img
+            src="/assets/images/WTT%20Cover.jpg"
+            alt="Welcome to Tomorrow book cover"
+            class="book-cover"
+            width="280"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+        <h3 class="card__title">Welcome to Tomorrow</h3>
+        <p class="card__description">
+          A beginner's guide to technology for people who feel left behind by it.
+          Written in plain language with humor and pop culture references — covering
+          everything from IT basics to AI, Big Data, APIs, and SDKs.
+        </p>
+        <div style="margin-block-start: var(--space-4); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="https://welcometotomorrow.today" target="_blank" rel="noopener" class="btn btn--primary">Visit WelcomeToTomorrow.today</a>
+          <a href="/contact/" class="btn btn--secondary">Request a Copy</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-block-start: var(--space-6); color: var(--color-ink-muted);">
+      Featured speaker at Cisco UI/UX Conference (dzone) on AI integration in user interfaces.
+    </p>
+
+  </div>
+</section>
+
+{# ===========================================================================
+   PORTFOLIO GALLERIES
+   Each gallery is a separate section with thumbnail grid, inline carousel,
+   and a <dialog>-based lightbox. Uses Invoker Commands for zero-JS open,
+   closedby="any" for light dismiss, and ::scroll-button/marker for carousel nav.
+   =========================================================================== #}
+<section class="section portfolio-galleries">
+  <div class="container">
+
+    <h2 class="portfolio-galleries__heading">Campaign Galleries</h2>
+    <p class="portfolio-galleries__subheading">
+      Visual work from a decade in ad tech — interactive campaigns, community contests,
+      and rich media experiences built for major brands.
+    </p>
+
+    {% for gallery in galleries %}
+    <section class="gallery-section" id="gallery-{{ gallery.id }}">
+
+      <header class="gallery-header">
+        <span class="gallery-header__eyebrow">{{ gallery.company }} &middot; {{ gallery.year }}</span>
+        <h3 class="gallery-header__title">{{ gallery.title }}</h3>
+        <p class="gallery-header__desc">{{ gallery.description }}</p>
+        <a href="{{ gallery.timelineRef }}" class="gallery-header__back">↑ Back to timeline</a>
+      </header>
+
+      {# ---- Thumbnail grid ---- #}
+      <div class="gallery-grid stagger">
+        {% for img in gallery.images %}
+        <button
+          class="gallery-thumb"
+          commandfor="lightbox-{{ gallery.id }}"
+          command="show-modal"
+          data-slide="{{ loop.index0 }}"
+          aria-label="View {{ img.caption }} in lightbox"
+        >
+          <img
+            src="{{ img.src }}"
+            alt="{{ img.alt }}"
+            loading="lazy"
+          />
+          <span class="gallery-thumb__caption">{{ img.caption }}</span>
+        </button>
+        {% endfor %}
+      </div>
+
+      {# ---- Lightbox dialog (Invoker Commands + closedby="any") ---- #}
+      <dialog id="lightbox-{{ gallery.id }}" class="lightbox" closedby="any">
+        <div class="lightbox__carousel" data-gallery="{{ gallery.id }}">
+          {% for img in gallery.images %}
+          <figure data-index="{{ loop.index0 }}">
+            <img
+              src="{{ img.src }}"
+              alt="{{ img.alt }}"
+              loading="lazy"
+            />
+            <figcaption>{{ img.caption }}{% if gallery.images | length > 1 %} &middot; {{ loop.index }} of {{ gallery.images | length }}{% endif %}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+        <button commandfor="lightbox-{{ gallery.id }}" command="close" class="lightbox__close" aria-label="Close lightbox">✕</button>
+      </dialog>
+
+    </section>
+    {% endfor %}
+
+  </div>{# /.container #}
+</section>
+
+{# ---- Portfolio CTA ---- #}
+<section class="portfolio-cta">
+  <div class="container container--narrow">
+    <h2 class="portfolio-cta__heading">Let's Build Something</h2>
+    <p class="portfolio-cta__text">
+      If you're working on AI products, education technology, or accessibility tools —
+      or if you need someone who can bridge strategy and engineering — I'd like to hear about it.
+    </p>
+    <div class="hero__actions">
+      <a href="/contact/" class="btn btn--primary btn--large">Let's Work Together</a>
+      <a href="/blog/" class="btn btn--secondary btn--large">Read My Writing</a>
+    </div>
+  </div>
+</section>

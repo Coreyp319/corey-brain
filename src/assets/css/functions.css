@@ -1,0 +1,26 @@
+/* ==========================================================================
+   functions.css — CSS Custom Functions & Conditionals (2025 Features)
+   Progressive enhancement: these only work in supporting browsers.
+   ========================================================================== */
+
+/* ---- Custom @function definitions ----
+   Wrapped in @supports for progressive enhancement.
+   Browsers without support simply ignore these blocks. */
+
+/* Conditional border radius:
+   Removes border-radius when element is within --edge-dist of viewport edge.
+   From CSS Wrapped 2025. */
+@function --conditional-radius(--radius, --edge-dist: 4px) {
+  result: clamp(0px, ((100vw - var(--edge-dist)) - 100%) * 1e5, var(--radius));
+}
+
+/* Fluid spacing function:
+   Returns a clamped space value between min and max. */
+@function --fluid-space(--min, --max) {
+  result: clamp(var(--min), calc(var(--min) + (var(--max) - var(--min)) * ((100vw - 20rem) / 60)), var(--max));
+}
+
+/* Negate function: returns the inverse of a value */
+@function --negate(--value) {
+  result: calc(-1 * var(--value));
+}

@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: Welcome to Tomorrow
+description: "Welcome to Tomorrow: a beginner's guide to technology — guiding readers in plain language on a tour of technology's tools and impacts throughout society."
+---
+
+<section class="section" style="view-transition-name: page-content;">
+  <div class="container container--narrow">
+
+    <header class="page-header" style="text-align: center;">
+      <span class="card__eyebrow">Book</span>
+      <h1 class="page-title" style="view-transition-name: page-title;">Welcome to Tomorrow</h1>
+      <p class="page-subtitle" style="margin-inline: auto;">A beginner's guide to technology</p>
+    </header>
+
+    <div class="prose" style="margin-block-start: var(--space-12);">
+
+      <blockquote>
+        This book will guide you on your first steps into careers in technology.
+        My mission is to prepare you for your future by highlighting both the
+        opportunity and risks in technology.
+      </blockquote>
+
+      <h2>What This Book Is About</h2>
+
+      <p>
+        <em>Welcome to Tomorrow</em> is a non-fiction technology educational work that guides readers
+        in plain language on a tour of technology's tools and impacts throughout society.
+        Written for anyone who wants to understand technology but doesn't know where to start.
+      </p>
+
+      <p>
+        Whether you're a student exploring career paths, a professional pivoting into tech,
+        or simply curious about how the digital world works — this book meets you where you are
+        and walks you through the landscape in clear, approachable language.
+      </p>
+
+      <h2>Why I Wrote It</h2>
+
+      <p>
+        Technology is the most powerful force shaping our world, but the conversation around it
+        often excludes the people who need to understand it most. I wrote <em>Welcome to Tomorrow</em>
+        because I believe everyone deserves a seat at the table — not just those who already speak the language.
+      </p>
+
+      <p>
+        This is the same belief that drives <a href="/cocovox/">Cocovox</a>: that learning tools
+        should be accessible to everyone, that understanding shouldn't be locked behind jargon,
+        and that tomorrow belongs to everyone willing to show up and learn.
+      </p>
+
+      <h2>Where to Find It</h2>
+
+      <p>
+        The full manuscript is available. Published June 6, 2017 — and the themes are more relevant today than ever.
+      </p>
+
+      <div style="margin-block-start: var(--space-8); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+        <a href="https://welcometotomorrow.today" target="_blank" rel="noopener" class="btn btn--primary btn--large">Visit WelcomeToTomorrow.today</a>
+        <a href="/contact/" class="btn btn--secondary btn--large">Request a Copy</a>
+      </div>
+
+      <h2>Also Published</h2>
+
+      <p>
+        <strong><a href="https://adexchanger.com" target="_blank" rel="noopener">A Net Neutrality Boon For Marketers: Faster Data Speed</a></strong><br>
+        <em>AdExchanger.com</em> · March 19, 2015
+      </p>
+      <p>
+        Net neutrality rules will give rise to a number of changes in the digital advertising landscape,
+        including new, exciting opportunities for marketers to enrich the way they engage consumers.
+      </p>
+
+    </div>
+  </div>
+</section>

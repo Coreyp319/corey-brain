@@ -1,0 +1,342 @@
+[
+  {
+    "id": "armani",
+    "title": "Armani — Moving Images Campaign",
+    "company": "Adcade",
+    "year": "2014",
+    "timelineRef": "#adtech",
+    "description": "Multi-format interactive campaign for Armani's Moving Images collection. Built on Adcade's HTML5 platform — pushdown, interstitial, banner, and leaderboard formats with rich media engagement.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/armani/arm-top.png",
+        "alt": "Armani Moving Images campaign header creative",
+        "caption": "Campaign Header"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani/pushdown-initial.jpg",
+        "alt": "Armani pushdown ad — initial collapsed state",
+        "caption": "Pushdown — Initial State"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani/pushdown-scroll.jpg",
+        "alt": "Armani pushdown ad — scroll-triggered expansion",
+        "caption": "Pushdown — Scroll Expansion"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani/pushdown-overlay.jpg",
+        "alt": "Armani pushdown ad — full overlay state",
+        "caption": "Pushdown — Full Overlay"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani/300x250.jpg",
+        "alt": "Armani Moving Images 300x250 medium rectangle ad",
+        "caption": "300×250 Medium Rectangle"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani/970x90.jpg",
+        "alt": "Armani Moving Images 970x90 leaderboard ad",
+        "caption": "970×90 Leaderboard"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani-interstitial/interstitial-intro.jpg",
+        "alt": "Armani interstitial ad — intro screen",
+        "caption": "Interstitial — Intro"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani-interstitial/interstitial-01.jpg",
+        "alt": "Armani interstitial ad — frame 1",
+        "caption": "Interstitial — Frame 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani-interstitial/interstitial-02.jpg",
+        "alt": "Armani interstitial ad — frame 2",
+        "caption": "Interstitial — Frame 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/armani-interstitial/interstitial-03.jpg",
+        "alt": "Armani interstitial ad — frame 3",
+        "caption": "Interstitial — Frame 3"
+      }
+    ]
+  },
+  {
+    "id": "airbnb",
+    "title": "AirBNB — Panorama Tablet Experience",
+    "company": "Adcade",
+    "year": "2014",
+    "timelineRef": "#adtech",
+    "description": "Interactive panoramic ad experience for AirBNB on tablet devices. Users could swipe through immersive panoramic imagery — built with Adcade's HTML5 animation platform.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/airbnb/panorama-tablet-00.jpg",
+        "alt": "AirBNB panorama tablet ad — frame 1",
+        "caption": "Panorama — Frame 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/airbnb/panorama-tablet-01.jpg",
+        "alt": "AirBNB panorama tablet ad — frame 2",
+        "caption": "Panorama — Frame 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/airbnb/panorama-tablet-02.jpg",
+        "alt": "AirBNB panorama tablet ad — frame 3",
+        "caption": "Panorama — Frame 3"
+      }
+    ]
+  },
+  {
+    "id": "tudor",
+    "title": "Tudor × Esquire — All-American Roadtrip",
+    "company": "Adcade",
+    "year": "2014",
+    "timelineRef": "#adtech",
+    "description": "Multi-screen interactive experience for Tudor watches on Esquire. A rich, device-responsive campaign with sequential storytelling across multiple creative states.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/all-devices.jpg",
+        "alt": "Tudor All-American Roadtrip — multi-device composite showing responsive layouts",
+        "caption": "All Devices — Responsive Layouts"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-01.jpg",
+        "alt": "Tudor campaign — screen state 1",
+        "caption": "Screen 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-02.jpg",
+        "alt": "Tudor campaign — screen state 2",
+        "caption": "Screen 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-03.jpg",
+        "alt": "Tudor campaign — screen state 3",
+        "caption": "Screen 3"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-04.jpg",
+        "alt": "Tudor campaign — screen state 4",
+        "caption": "Screen 4"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-05.jpg",
+        "alt": "Tudor campaign — screen state 5",
+        "caption": "Screen 5"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-06.jpg",
+        "alt": "Tudor campaign — screen state 6",
+        "caption": "Screen 6"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/tudor/revised-article.jpg",
+        "alt": "Tudor campaign — article integration view",
+        "caption": "Article Integration"
+      }
+    ]
+  },
+  {
+    "id": "nest-protect",
+    "title": "Home Depot × Nest Protect",
+    "company": "Adcade",
+    "year": "2013",
+    "timelineRef": "#adtech",
+    "description": "Desktop and mobile interactive campaign for Nest Protect through Home Depot. A full-funnel experience with 7 desktop states and 5 mobile screens showcasing the product.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-01.png",
+        "alt": "Nest Protect desktop ad — screen 1",
+        "caption": "Desktop — Screen 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-02.png",
+        "alt": "Nest Protect desktop ad — screen 2",
+        "caption": "Desktop — Screen 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-03.png",
+        "alt": "Nest Protect desktop ad — screen 3",
+        "caption": "Desktop — Screen 3"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-04.png",
+        "alt": "Nest Protect desktop ad — screen 4",
+        "caption": "Desktop — Screen 4"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-05.png",
+        "alt": "Nest Protect desktop ad — screen 5",
+        "caption": "Desktop — Screen 5"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-06.png",
+        "alt": "Nest Protect desktop ad — screen 6",
+        "caption": "Desktop — Screen 6"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/desktop/laptop-07.png",
+        "alt": "Nest Protect desktop ad — screen 7",
+        "caption": "Desktop — Screen 7"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/mobile/iphone-01.png",
+        "alt": "Nest Protect mobile ad — screen 1",
+        "caption": "Mobile — Screen 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/mobile/iphone-02.png",
+        "alt": "Nest Protect mobile ad — screen 2",
+        "caption": "Mobile — Screen 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/mobile/iphone-03.png",
+        "alt": "Nest Protect mobile ad — screen 3",
+        "caption": "Mobile — Screen 3"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/mobile/iphone-04.png",
+        "alt": "Nest Protect mobile ad — screen 4",
+        "caption": "Mobile — Screen 4"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/nest-protect/mobile/iphone-05.png",
+        "alt": "Nest Protect mobile ad — screen 5",
+        "caption": "Mobile — Screen 5"
+      }
+    ]
+  },
+  {
+    "id": "verizon",
+    "title": "Verizon PowerHouse — NYTimes",
+    "company": "Adcade",
+    "year": "2013",
+    "timelineRef": "#adtech",
+    "description": "Rich media 300×600 half-page ad for Verizon's PowerHouse campaign on NYTimes. Sequential engagement states designed to drive product awareness.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/verizon/powerhouse-00.jpg",
+        "alt": "Verizon PowerHouse 300x600 ad — initial state",
+        "caption": "Initial State"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/verizon/powerhouse-01.jpg",
+        "alt": "Verizon PowerHouse 300x600 ad — state 2",
+        "caption": "State 2"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/verizon/powerhouse-02.jpg",
+        "alt": "Verizon PowerHouse 300x600 ad — state 3",
+        "caption": "State 3"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/verizon/powerhouse-03.jpg",
+        "alt": "Verizon PowerHouse 300x600 ad — final state",
+        "caption": "Final State"
+      }
+    ]
+  },
+  {
+    "id": "outlander",
+    "title": "Outlander — Display Ads",
+    "company": "Adcade",
+    "year": "2012–2013",
+    "timelineRef": "#adtech",
+    "description": "High-impact display campaign built on the Adcade platform for Outlander. This showcased the platform's ability to produce premium, interactive display creative.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/adcade/outlander/outlander-1.png",
+        "alt": "Outlander interactive display ad — variant 1",
+        "caption": "Outlander — Variant 1"
+      },
+      {
+        "src": "/assets/images/portfolio/adcade/outlander/outlander-2.png",
+        "alt": "Outlander interactive display ad — variant 2",
+        "caption": "Outlander — Variant 2"
+      }
+    ]
+  },
+  {
+    "id": "witcher2",
+    "title": "The Witcher 2 — Community Contest",
+    "company": "Burst Media",
+    "year": "2011",
+    "timelineRef": "#adtech",
+    "description": "Managed a community-driven contest for The Witcher 2 on ModDB. Players submitted screenshots and gameplay moments — the winning entry was selected from hundreds of submissions.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/moddb-contest-announcement.png",
+        "alt": "ModDB Witcher 2 contest announcement page",
+        "caption": "Contest announcement on ModDB"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/moddb-contest-page.png",
+        "alt": "ModDB Witcher 2 contest page with submissions",
+        "caption": "Contest page with player submissions"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/geralt-bomb.png",
+        "alt": "Contest entry — Geralt throwing a bomb",
+        "caption": "Entry: Geralt Bomb"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/geralt-bit-my-finger.png",
+        "alt": "Contest entry — Geralt bit my finger moment",
+        "caption": "Entry: Geralt Bit My Finger"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/tank-geralt.png",
+        "alt": "Contest entry — Tank Geralt",
+        "caption": "Entry: Tank Geralt"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/witcher2/contest-winner.png",
+        "alt": "Winning contest entry",
+        "caption": "Contest Winner"
+      }
+    ]
+  },
+  {
+    "id": "xmen",
+    "title": "X-Men — In-Game Advertising Campaign",
+    "company": "Burst Media",
+    "year": "2011",
+    "timelineRef": "#adtech",
+    "description": "In-game and companion ad placements across gaming sites for the X-Men franchise. Multiple ad formats including prerolls, companion units, and display ads across niche gaming communities.",
+    "images": [
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/cheatmasters-preroll-companion.png",
+        "alt": "Cheatmasters site with X-Men preroll and companion ad units",
+        "caption": "Cheatmasters — Preroll + Companion"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/cheatmasters-300x250.png",
+        "alt": "X-Men 300x250 display ad on Cheatmasters",
+        "caption": "Cheatmasters — 300×250 Display"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/comicbook-realm.png",
+        "alt": "X-Men ad placement on Comicbook Realm",
+        "caption": "Comicbook Realm"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/comicbook-resources.png",
+        "alt": "X-Men ad placement on Comicbook Resources",
+        "caption": "Comicbook Resources"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/comicbook-resources-160x600.png",
+        "alt": "X-Men 160x600 skyscraper ad on Comicbook Resources",
+        "caption": "Comicbook Resources — 160×600 Skyscraper"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/dax-gamer.png",
+        "alt": "X-Men ad placement on Dax Gamer",
+        "caption": "Dax Gamer"
+      },
+      {
+        "src": "/assets/images/portfolio/burst-media/xmen/gossip-gamers.png",
+        "alt": "X-Men ad placement on Gossip Gamers",
+        "caption": "Gossip Gamers"
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cisco",
+    "company": "Cisco Systems",
+    "title": "AI Technical Leader & Community Manager",
+    "period": "May 2021 - Present",
+    "current": true,
+    "summary": "Designing and implementing AI/ML solutions for Cisco's 400K+ SMB customers. Patent-pending inventor, LLM Center of Excellence contributor, and technical mentor.",
+    "sections": [
+      {
+        "heading": "AI Solutions & ML Infrastructure",
+        "items": [
+          "Designed and developed patent-pending AI content creation pipeline, optimizing content production workflows",
+          "Architected and built internal AI tools leveraging Ollama and Open-WebUI, currently approaching beta testing phase",
+          "Developed Python-based Support Chatbot using Cisco BUFF platform and transformer models to improve content discovery",
+          "Active contributor to Cisco's LLM Center of Excellence since 2022, researching and implementing cutting-edge AI solutions"
+        ]
+      },
+      {
+        "heading": "AI Technical Leadership & Mentorship",
+        "items": [
+          "Lead a team of 4 engineers in AI skill development, focusing on LangChain implementation and prompt engineering",
+          "Created comprehensive AI educational materials and conducted company-wide training sessions",
+          "Presented multiple times at Cisco events on AI applications and best practices",
+          "Featured speaker at Cisco UI/UX Conference (dzone) on AI integration in user interfaces"
+        ]
+      },
+      {
+        "heading": "End-to-End Solution Design",
+        "items": [
+          "Led cross-functional collaboration with Cisco Webex Design team to integrate AI capabilities into product experiences",
+          "Developed AI Brainstorming session kit in partnership with design team to improve ideation processes",
+          "Designed and developed digital Hardware Installation Guide using SvelteKit, NodeJS, and Postgres",
+          "Built automation application reducing document publishing time from 3+ hours to <30 minutes using NodeJS"
+        ]
+      }
+    ],
+    "tags": ["AI Strategy", "LangChain", "Python", "FastAPI", "Pydantic", "Ollama", "Open-WebUI", "MLOps"]
+  },
+  {
+    "id": "fishman",
+    "company": "Fishman Consulting (Cisco)",
+    "title": "Team Lead, Content Development",
+    "period": "March 2018 - May 2021",
+    "current": false,
+    "summary": "Led content development team at Cisco, driving AI adoption and workflow modernization that dramatically improved output and reach.",
+    "sections": [
+      {
+        "heading": "Technical Leadership & Solution Development",
+        "items": [
+          "Led team in continuous improvement of workflow and toolchain, including JavaScript-based document feature development",
+          "Managed transition to AI-assisted content development, achieving 175% reduction in article production time",
+          "Mentored team in advanced web publishing techniques, resulting in 40% year-over-year growth in document visitors",
+          "Authored configuration guides and white papers for Cisco small business hardware"
+        ]
+      }
+    ],
+    "tags": ["JavaScript", "Content Strategy", "Team Leadership", "Technical Writing"]
+  },
+  {
+    "id": "consulting",
+    "company": "Corey Preston Consulting",
+    "title": "Principal & Technology Author",
+    "period": "March 2016 - 2018",
+    "current": false,
+    "summary": "Independent consulting and published author, bridging the gap between complex technology and accessible education.",
+    "sections": [
+      {
+        "heading": "AI & Technology Research",
+        "items": [
+          "Researched and authored content on emerging AI technologies since 2017",
+          "Developed and published \"Welcome to Tomorrow: A Beginner's Guide to Technology,\" a non-fiction educational work explaining complex technical concepts in accessible language",
+          "Created research-backed content introducing FinTech innovations for Visa's internal sales professionals"
+        ]
+      }
+    ],
+    "tags": ["Technology Writing", "AI Research", "FinTech", "Publishing"]
+  },
+  {
+    "id": "adcade",
+    "company": "Adcade / Exponential Media",
+    "title": "Product Innovation Lead",
+    "period": "October 2008 - March 2016",
+    "current": false,
+    "summary": "Led product innovation in NYC's ad tech scene, developing first-in-industry interactive ad experiences for major brands on an HTML5 SaaS platform.",
+    "sections": [
+      {
+        "heading": "Product Development & Technical Leadership",
+        "items": [
+          "Led skunk works team in developing first-in-industry ad units for brand awareness campaigns from concept through engineering specifications",
+          "Authored UI/UX design documentation and managed implementation of web application-style advertising products",
+          "Established thought leadership through published articles in industry periodical AdExchanger.com"
+        ]
+      }
+    ],
+    "tags": ["HTML5", "Product Management", "UI/UX Design", "Ad Tech", "SaaS"]
+  }
+]

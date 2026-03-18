@@ -1,0 +1,123 @@
+/* ==========================================================================
+   layout.css — Page Layout, Grid Systems, Responsive Structure
+   ========================================================================== */
+
+/* ---- Page wrapper ---- */
+.site-main {
+  width: 100%;
+  max-width: var(--max-width-full);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Section spacing ---- */
+.section {
+  padding-block: var(--space-16);
+}
+
+.section--lg {
+  padding-block: var(--space-24);
+}
+
+/* ---- Content widths ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width-wide);
+  margin-inline: auto;
+}
+
+.container--narrow {
+  max-width: var(--max-width-prose);
+}
+
+/* ---- Grid systems ---- */
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- Flex utilities ---- */
+.flex {
+  display: flex;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex--gap-sm { gap: var(--space-3); }
+.flex--gap    { gap: var(--space-6); }
+.flex--gap-lg { gap: var(--space-8); }
+
+/* ---- Page content layout ---- */
+.page-content {
+  padding-block: var(--space-16);
+}
+
+.page-header {
+  margin-block-end: var(--space-12);
+}
+
+.page-title {
+  font-size: var(--text-4xl);
+  margin-block-end: var(--space-4);
+}
+
+.page-subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-ink-muted);
+  max-width: var(--max-width-prose);
+}
+
+/* ---- Stretch sizing keyword (2025 feature) ---- */
+@supports (height: stretch) {
+  .full-height {
+    height: stretch;
+  }
+}

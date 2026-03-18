@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: Blog
+description: Thoughts on AI, education, accessibility, and building in public.
+---
+
+<section class="section" style="view-transition-name: page-content;">
+  <div class="container container--narrow">
+
+    <header class="page-header">
+      <h1 class="page-title" style="view-transition-name: page-title;">Blog</h1>
+      <p class="page-subtitle">Thoughts on AI, education, accessibility, and building in public.</p>
+    </header>
+
+    <div class="stagger">
+      {%- for post in collections.posts %}
+      <article class="post-card">
+        <div class="post-card__meta">
+          <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+          <span>{{ post.content | readingTime }}</span>
+        </div>
+        <h2 class="post-card__title">
+          <a href="{{ post.url }}" style="view-transition-name: post-title-{{ post.fileSlug }};">{{ post.data.title }}</a>
+        </h2>
+        {% if post.data.excerpt %}
+        <p class="post-card__excerpt">{{ post.data.excerpt }}</p>
+        {% endif %}
+        {% if post.data.tags %}
+        <div class="post-tags" style="margin-block-start: var(--space-3);">
+          {%- for tag in post.data.tags %}
+          {% if tag != "post" %}<span class="tag">{{ tag }}</span>{% endif %}
+          {%- endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+
+    {%- if collections.posts.length == 0 %}
+    <p style="color: var(--color-ink-muted); font-size: var(--text-lg); margin-block-start: var(--space-8);">
+      Posts coming soon. In the meantime, check out my <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> for recent writing.
+    </p>
+    {%- endif %}
+
+  </div>
+</section>
